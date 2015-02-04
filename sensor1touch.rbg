@@ -1,0 +1,250 @@
+<Version>1.0.1</Version>
+
+<ProgrammingBlock type="loop" loopType="Repeat">
+    <Parameters>
+        <Parameter name="Count" type="int">3</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="loop" loopType="IfOnly">
+    <Parameters>
+        <Parameter name="LHS" type="typedef">getMotorEncoder(armMotor)</Parameter>
+        <Parameter name="operator" type="typedef">&lt;=</Parameter>
+        <Parameter name="RHS" type="int">300</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="moveMotor">
+    <Parameters>
+        <Parameter name="motorPort" type="base typedef" typeDef="tMotor">armMotor</Parameter>
+        <Parameter name="quantity" type="float">1</Parameter>
+        <Parameter name="unitType" type="base typedef" typeDef="tMovementUnits">rotations</Parameter>
+        <Parameter name="speed" type="short">50</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="end"/>
+
+<ProgrammingBlock type="functionCall" function="setMultipleMotors">
+    <Parameters>
+        <Parameter name="speed" type="short">50</Parameter>
+        <Parameter name="firstMotor" type="base typedef" typeDef="tMotor">motor1</Parameter>
+        <Parameter name="secondMotor" type="base typedef" typeDef="tMotor">motor6</Parameter>
+        <Parameter name="thirdMotor" type="base typedef" typeDef="tMotor"/>
+        <Parameter name="fourthMotor" type="base typedef" typeDef="tMotor"/>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="OneLineLoop" loopType="WaitUntil">
+    <Parameters>
+        <Parameter name="LHS" type="typedef">getBumperValue(bumpSwitch)</Parameter>
+        <Parameter name="operator" type="typedef">==</Parameter>
+        <Parameter name="RHS" type="int">1</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="stopMultipleMotors">
+    <Parameters>
+        <Parameter name="firstMotor" type="base typedef" typeDef="tMotor">motor6</Parameter>
+        <Parameter name="secondMotor" type="base typedef" typeDef="tMotor">motor1</Parameter>
+        <Parameter name="thirdMotor" type="base typedef" typeDef="tMotor"/>
+        <Parameter name="fourthMotor" type="base typedef" typeDef="tMotor"/>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="backward">
+    <Parameters>
+        <Parameter name="quantity" type="float">200</Parameter>
+        <Parameter name="unitType" type="base typedef" typeDef="tMovementUnits">degrees</Parameter>
+        <Parameter name="speed" type="short">50</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="moveMotor">
+    <Parameters>
+        <Parameter name="motorPort" type="base typedef" typeDef="tMotor">armMotor</Parameter>
+        <Parameter name="quantity" type="float">-1</Parameter>
+        <Parameter name="unitType" type="base typedef" typeDef="tMovementUnits">rotations</Parameter>
+        <Parameter name="speed" type="short">50</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="moveMotor">
+    <Parameters>
+        <Parameter name="motorPort" type="base typedef" typeDef="tMotor">clawMotor</Parameter>
+        <Parameter name="quantity" type="float">250</Parameter>
+        <Parameter name="unitType" type="base typedef" typeDef="tMovementUnits">milliseconds</Parameter>
+        <Parameter name="speed" type="short">50</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="moveMotor">
+    <Parameters>
+        <Parameter name="motorPort" type="base typedef" typeDef="tMotor">armMotor</Parameter>
+        <Parameter name="quantity" type="float">1</Parameter>
+        <Parameter name="unitType" type="base typedef" typeDef="tMovementUnits">rotations</Parameter>
+        <Parameter name="speed" type="short">50</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="setMultipleMotors">
+    <Parameters>
+        <Parameter name="speed" type="short">50</Parameter>
+        <Parameter name="firstMotor" type="base typedef" typeDef="tMotor">motor1</Parameter>
+        <Parameter name="secondMotor" type="base typedef" typeDef="tMotor">motor6</Parameter>
+        <Parameter name="thirdMotor" type="base typedef" typeDef="tMotor"/>
+        <Parameter name="fourthMotor" type="base typedef" typeDef="tMotor"/>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="OneLineLoop" loopType="WaitUntil">
+    <Parameters>
+        <Parameter name="LHS" type="typedef">getBumperValue(bumpSwitch)</Parameter>
+        <Parameter name="operator" type="typedef">==</Parameter>
+        <Parameter name="RHS" type="int">1</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="stopMultipleMotors">
+    <Parameters>
+        <Parameter name="firstMotor" type="base typedef" typeDef="tMotor">motor1</Parameter>
+        <Parameter name="secondMotor" type="base typedef" typeDef="tMotor">motor6</Parameter>
+        <Parameter name="thirdMotor" type="base typedef" typeDef="tMotor"/>
+        <Parameter name="fourthMotor" type="base typedef" typeDef="tMotor"/>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="backward">
+    <Parameters>
+        <Parameter name="quantity" type="float">100</Parameter>
+        <Parameter name="unitType" type="base typedef" typeDef="tMovementUnits">degrees</Parameter>
+        <Parameter name="speed" type="short">50</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="moveMotor">
+    <Parameters>
+        <Parameter name="motorPort" type="base typedef" typeDef="tMotor">clawMotor</Parameter>
+        <Parameter name="quantity" type="float">250</Parameter>
+        <Parameter name="unitType" type="base typedef" typeDef="tMovementUnits">milliseconds</Parameter>
+        <Parameter name="speed" type="short">-50</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="setMultipleMotors">
+    <Parameters>
+        <Parameter name="speed" type="short">-50</Parameter>
+        <Parameter name="firstMotor" type="base typedef" typeDef="tMotor">motor1</Parameter>
+        <Parameter name="secondMotor" type="base typedef" typeDef="tMotor">motor6</Parameter>
+        <Parameter name="thirdMotor" type="base typedef" typeDef="tMotor"/>
+        <Parameter name="fourthMotor" type="base typedef" typeDef="tMotor"/>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="OneLineLoop" loopType="WaitUntil">
+    <Parameters>
+        <Parameter name="LHS" type="typedef">getDistanceValue(distanceMM)</Parameter>
+        <Parameter name="operator" type="typedef">&lt;</Parameter>
+        <Parameter name="RHS" type="int">100</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="stopAllMotors"/>
+
+<ProgrammingBlock type="functionCall" function="resetMotorEncoder">
+    <Parameters>
+        <Parameter name="nMotorIndex" type="base typedef" typeDef="tMotor">leftMotor</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="resetMotorEncoder">
+    <Parameters>
+        <Parameter name="nMotorIndex" type="base typedef" typeDef="tMotor">rightMotor</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="turnRight">
+    <Parameters>
+        <Parameter name="quantity" type="float">0.7</Parameter>
+        <Parameter name="unitType" type="base typedef" typeDef="tMovementUnits">rotations</Parameter>
+        <Parameter name="speed" type="short">50</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="forward">
+    <Parameters>
+        <Parameter name="quantity" type="float">1.7</Parameter>
+        <Parameter name="unitType" type="base typedef" typeDef="tMovementUnits">rotations</Parameter>
+        <Parameter name="speed" type="short">50</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="functionCall" function="turnLeft">
+    <Parameters>
+        <Parameter name="quantity" type="float">0.7</Parameter>
+        <Parameter name="unitType" type="base typedef" typeDef="tMovementUnits">rotations</Parameter>
+        <Parameter name="speed" type="short">50</Parameter>
+    </Parameters>
+</ProgrammingBlock>
+
+<ProgrammingBlock type="end"/>
+
+<ProgrammingBlock type="comment" commented="1">back</ProgrammingBlock>
+
+<ProgrammingBlock type="comment" commented="1">finished back</ProgrammingBlock>
+
+<RobotConfiguration>#pragma config(Sensor, port2,  touchLED,       sensorVexIQ_LED)
+#pragma config(Sensor, port3,  colorDetector,  sensorVexIQ_ColorHue)
+#pragma config(Sensor, port4,  gyroSensor,     sensorVexIQ_Gyro)
+#pragma config(Sensor, port7,  distanceMM,     sensorVexIQ_Distance)
+#pragma config(Sensor, port8,  bumpSwitch,     sensorVexIQ_Touch)
+#pragma config(Motor,  motor1,          leftMotor,     tmotorVexIQ, openLoop, driveLeft, encoder)
+#pragma config(Motor,  motor6,          rightMotor,    tmotorVexIQ, openLoop, reversed, driveRight, encoder)
+#pragma config(Motor,  motor10,         armMotor,      tmotorVexIQ, openLoop, encoder)
+#pragma config(Motor,  motor11,         clawMotor,     tmotorVexIQ, openLoop, encoder)
+//*!!Code automatically generated by 'ROBOTC' configuration wizard               !!*//
+</RobotConfiguration>
+
+<CSource>#pragma config(Sensor, port2,  touchLED,       sensorVexIQ_LED)
+#pragma config(Sensor, port3,  colorDetector,  sensorVexIQ_ColorHue)
+#pragma config(Sensor, port4,  gyroSensor,     sensorVexIQ_Gyro)
+#pragma config(Sensor, port7,  distanceMM,     sensorVexIQ_Distance)
+#pragma config(Sensor, port8,  bumpSwitch,     sensorVexIQ_Touch)
+#pragma config(Motor,  motor1,          leftMotor,     tmotorVexIQ, openLoop, driveLeft, encoder)
+#pragma config(Motor,  motor6,          rightMotor,    tmotorVexIQ, openLoop, reversed, driveRight, encoder)
+#pragma config(Motor,  motor10,         armMotor,      tmotorVexIQ, openLoop, encoder)
+#pragma config(Motor,  motor11,         clawMotor,     tmotorVexIQ, openLoop, encoder)
+//*!!Code automatically generated by 'ROBOTC' configuration wizard               !!*//
+
+
+task main()
+{
+	repeat (3) {
+		if (getMotorEncoder(armMotor) &lt;= 300) {
+			moveMotor(armMotor, 1, rotations, 50);
+		}
+		setMultipleMotors(50, motor1, motor6, , );
+		waitUntil (getBumperValue(bumpSwitch) == 1);
+		stopMultipleMotors(motor6, motor1, , );
+		backward(200, degrees, 50);
+		moveMotor(armMotor, -1, rotations, 50);
+		moveMotor(clawMotor, 250, milliseconds, 50);
+		moveMotor(armMotor, 1, rotations, 50);
+		setMultipleMotors(50, motor1, motor6, , );
+		waitUntil (getBumperValue(bumpSwitch) == 1);
+		stopMultipleMotors(motor1, motor6, , );
+		backward(100, degrees, 50);
+		moveMotor(clawMotor, 250, milliseconds, -50);
+		setMultipleMotors(-50, motor1, motor6, , );
+		waitUntil (getDistanceValue(distanceMM) &lt; 100);
+		stopAllMotors();
+		resetMotorEncoder(leftMotor);
+		resetMotorEncoder(rightMotor);
+		turnRight(0.7, rotations, 50);
+		forward(1.7, rotations, 50);
+		turnLeft(0.7, rotations, 50);
+	}
+	//// back
+	//// finished back
+}
+</CSource>
